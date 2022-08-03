@@ -97,6 +97,39 @@ $("#suggestSomething").keyup(function(){
     }
     $("#suggest").html("suggestion:"+$matched);
 });
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$("#sel1").change(function(){
+    $size=$(this).val();
+    if($size=="Small")
+    {
+        $("#price1").html("1500/-")
+    }
+    if($size=="Medium")
+    {
+        $("#price1").html("2000/-")
+    }
+    if($size=="Large")
+    {
+        $("#price1").html("3000/-")
+    }
+    console.log($size=="Small")
+});
+$("#sel2").change(function(){
+    $color=$(this).val();
+    if($color=="Light Grey")
+    {
+        $("#price2").html("1500/-")
+    }
+    if($color=="White")
+    {
+        $("#price2").html("2000/-")
+    }
+    if($color=="Red")
+    {
+        $("#price2").html("3000/-")
+    }
+});
+
 
 
 
