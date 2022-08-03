@@ -70,7 +70,7 @@
        
     }
     
- })
+ });
  $("#btnNext").click(function(){
     if(j<=4){
         
@@ -80,10 +80,23 @@
     
     console.log(image)
 
- })
+ });
 
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const flowers=["Rose","Lily","Sunflower","Lotus","Jasmine"];
+$("#suggestSomething").keyup(function(){
+    $matched="";
+    for(i=0;i<flowers.length; i++)
+    {
+        $name=$("#suggestSomething").val();
+        $match=flowers[i].substring(0,$name.length)
+        if($name==$match)
+        {
+            $matched+=" "+flowers[i]
+        }
+    }
+    $("#suggest").html("suggestion:"+$matched);
+});
 
 
 
