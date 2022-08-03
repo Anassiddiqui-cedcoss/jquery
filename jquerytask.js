@@ -31,5 +31,19 @@
            alert("It cant be blank")
        }
     });
+    $(".add").click(function(){
+        clas=document.getElementById("class").value;
+        board=document.getElementById("board").value;
+        marks=document.getElementById("marks").value;
+        division=document.getElementById("divs").value;
+        $("body").append("<div><input type='text'placeholder=Enter class><input type='text' placeholder='Enter board'><input type='text' placeholder='Enter Marks'><input type='text'placeholder='Enter Division'><button class='btn'>-</button></div>");
+       })
+      
+    $(".minus").click(function(){
+        $(".details").remove();
+    })
+    $("body").on("click",".btn",(function(){
+        $(this).parent().remove();
+    }));
 
 });
