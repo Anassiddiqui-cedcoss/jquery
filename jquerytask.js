@@ -1,5 +1,13 @@
 
     $(document).ready(function(){
+        var i=0; 
+        var color1 = ["black", "blue", "brown", "green"];
+        
+        setInterval(function(){
+            $(".change").css("color",color1[i]); i = (i + 1) % color1.length;},5000);
+           
+
+
     $("#confirmpass").keyup(function(){
         var password=document.getElementById("pass").value;
         var confirmpassword=document.getElementById("confirmpass").value;
@@ -49,16 +57,5 @@
     
     
 });
-var i = 0;
-function change() {
-  var doc = document.getElementsByClassName("change");
-  console.log(doc);
-  var color1 = ["black", "blue", "brown", "green"];
-  for(j=0;j<doc.length;j++)
-  {
-    doc[j].style.color=color1[i];
-  }
   
-  i = (i + 1) % color1.length;
-}
-setInterval(change, 1000);
+
