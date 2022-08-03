@@ -45,5 +45,20 @@
     $("body").on("click",".btn",(function(){
         $(this).parent().remove();
     }));
-
+    
+    
+    
 });
+var i = 0;
+function change() {
+  var doc = document.getElementsByClassName("change");
+  console.log(doc);
+  var color1 = ["black", "blue", "brown", "green"];
+  for(j=0;j<doc.length;j++)
+  {
+    doc[j].style.color=color1[i];
+  }
+  
+  i = (i + 1) % color1.length;
+}
+setInterval(change, 1000);
