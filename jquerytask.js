@@ -13,4 +13,11 @@
             document.getElementById("error").innerHTML="**not matched"
         }
     });
+    $(".btnEven").click(function(){
+        $("tr:even").css("background-color","LightGrey")
+    })
+    $(".btnOdd").click(function(){
+        $("tr:odd").css("background-color","DodgerBlue ")
+    })
+
 });
