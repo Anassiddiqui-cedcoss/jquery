@@ -15,9 +15,21 @@
     });
     $(".btnEven").click(function(){
         $("tr:even").css("background-color","LightGrey")
-    })
+    });
     $(".btnOdd").click(function(){
         $("tr:odd").css("background-color","DodgerBlue ")
-    })
+    });
+    $("#submit").click(function(){
+       first=document.getElementById("fname").value;
+       last=document.getElementById("lname").value;
+       if(first==""){
+           $("#fname").css("background-color","red")
+           alert("It cant be blank")
+       }
+       if(last==""){
+           $("#lname").css("background-color","red")
+           alert("It cant be blank")
+       }
+    });
 
 });
