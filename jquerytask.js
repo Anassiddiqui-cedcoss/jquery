@@ -135,7 +135,12 @@ $(".para").click(function(){
     alert("*****click Me")
 })
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$("#productsCategories").on("click",".btnAdd",function(){
+$li=$(this).parent();
+$newli="<li>New Items<button class='btnAdd'>+</button></li>";
+$li.after($newli);
+})
 
 
 
