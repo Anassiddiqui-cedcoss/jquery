@@ -37,16 +37,15 @@
     });
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     $(".add").click(function(){
-        clas=document.getElementById("class").value;
-        board=document.getElementById("board").value;
-        marks=document.getElementById("marks").value;
-        division=document.getElementById("divs").value;
-        $("body").append("<div><input type='text'placeholder=Enter class><input type='text' placeholder='Enter board'><input type='text' placeholder='Enter Marks'><input type='text'placeholder='Enter Division'><button class='btn'>-</button></div>");
-    })
+        $(".details").append("<div><input type='text'placeholder=Enter class><input type='text' placeholder='Enter board'><input type='text' placeholder='Enter Marks'><input type='text'placeholder='Enter Division'><button class='btn1'>+</button><button class='btn'>-</button></div>");
+    });
     
     $(".minus").click(function(){
-        $(".details").remove();
+        $(".main").remove();
     })
+    $("body").on("click",".btn1",(function(){
+        $(".main").append("<div><input type='text'placeholder=Enter class><input type='text' placeholder='Enter board'><input type='text' placeholder='Enter Marks'><input type='text'placeholder='Enter Division'><button class='btn1'>+</button><button class='btn'>-</button></div>");
+    }))
     $("body").on("click",".btn",(function(){
         $(this).parent().remove();
     }));
