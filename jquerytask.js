@@ -23,18 +23,35 @@
         $("tr:odd").css("background-color","DodgerBlue ")
     });
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
+     $flag=0;
     $("#submit").click(function(){
-        first=document.getElementById("fname").value;
-        last=document.getElementById("lname").value;
-        if(first==""){
-           $("#fname").css("background-color","red")
-           alert("It cant be blank")
+      $("#fname").css("background-color","white")
+   $("#lname").css("background-color","white")
+   if($("#fname").val()=="")
+      {
+        $("#fname").focus();
+        $("#fname").css("background-color","red")
+        $flag=1;
+        alert("please Enter first Name")
+    }
+    else{
+        $flag=0;
+    }
+    if($("#lname").val()=="")
+      {
+        $("#lname").css("background-color","red")
+        alert("please Enter last Name")
+        
+        
+        if($flag==0){
+            $("#lname").focus();
         }
-        if(last==""){
-           $("#lname").css("background-color","red")
-           alert("It cant be blank")
-        }
-    });
+    }
+    else{
+        $("#fname").focus();
+    }
+});
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     $(".add").click(function(){
         $(".details").append("<div><input type='text'placeholder=Enter class><input type='text' placeholder='Enter board'><input type='text' placeholder='Enter Marks'><input type='text'placeholder='Enter Division'><button class='btn1'>+</button><button class='btn'>-</button></div>");
