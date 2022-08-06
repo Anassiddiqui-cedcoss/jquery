@@ -1,6 +1,9 @@
 $(document).ready(function(){
     
-        $( "p").fadeTo( 500, 0.5 );
+    $( "button" ).click(function() {
+        $( "p" ).hide(5000);
+      });
+      
 
     
 });
