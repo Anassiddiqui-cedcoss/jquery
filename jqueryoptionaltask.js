@@ -1,5 +1,3 @@
-$(document).ready(function(){
-    $("li").eq(1).css("background-color", "yellow");
-
-  
-    })
+$( 'li' ).each(function( index, elem ) {
+    $( elem ).prepend( '' + index + ': ' );
+});
