@@ -65,3 +65,6 @@ body{
 #product_list table th{
 	text-align: left;
 }
+.error{
+	border:2px solid red;
+}
