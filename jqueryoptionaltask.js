@@ -1,4 +1,7 @@
 $(document).ready(function(){
-    $("#fname").hide();
-    $("#lname").hide();
-})
+    $("#fname").blur(function(){
+
+        $firstname=$("#fname").val();
+        alert($firstname)
+    })
+    })
