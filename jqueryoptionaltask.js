@@ -1,8 +1,5 @@
 $(document).ready(function(){
-    var clicked = false;
-$(".checkall").on("click", function() {
-  $(".checkhour").prop("checked", !clicked);
-  clicked = !clicked;
-  this.innerHTML = clicked ? 'unchecked' : 'checked';
-});
+   $append="<h4>Thursday</h4><h5>Friday</h5><h6>saturday</h6>"
+   $("#days").append($append)
+  
     })
