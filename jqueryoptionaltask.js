@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $("#fname").blur(function(){
-
-        $firstname=$("#fname").val();
-        alert($firstname)
-    })
+    var clicked = false;
+$(".checkall").on("click", function() {
+  $(".checkhour").prop("checked", !clicked);
+  clicked = !clicked;
+  this.innerHTML = clicked ? 'unchecked' : 'checked';
+});
     })
