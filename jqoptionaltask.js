@@ -1,8 +1,9 @@
 $(document).ready(function(){
-    $("#myselect").change(function(){
-    $text1=$("#myselect :selected").text();
-    alert($text1)
-    })
+$(".checkall").on("click", function() {
+$(".checkhour").attr("checked",!clicked );
+  clicked = !clicked;
+  this.innerHTML = clicked ? 'unchecked' : 'checked';
+});
 })
     
  
