@@ -11,6 +11,9 @@ function populate(){
 }
 //////////////////////////////////////////////////pushing array/////////////////////////////////////////////
 
+$(".success").hide();
+$(".error").hide();
+
 $(document).ready(function(){
     
     $regxpNumber=/^\d+$/;
@@ -29,7 +32,7 @@ $(document).ready(function(){
         }
         else if(isNaN($sku)){
             
-            $("#skuerror").html("**sku must be a number");
+            $("#skuerror").html("**sku must be a number")
             $errorFlag=1;
         }
         else{
@@ -176,7 +179,7 @@ $("#add_product").click(function(){
     namevalidation($name);
     pricevalidation($price);
     quantityvalidation($quantity); 
-    
+    $(".error").show();
     
     if($errorFlag==0)
     {
@@ -199,6 +202,7 @@ $("#add_product").click(function(){
                    $("#add_product").html("Add")
                    $(this).closest('div').find("input[type=text]").val("");
                    $(this).closest('div').find("input[type=number]").val("");
+                   $(".success").html("Product Updated Successfully")
                    $(".success").show();
                    $(".error").hide();
                    populate();
@@ -219,6 +223,8 @@ $("#add_product").click(function(){
     $("#tableshow").on("click", ".delete", (function() {
         alert("do you want to delete the file")
         $(this).closest("tr").remove();
+        $(".success").hide();
+
     }));
     ////////////////////////////////////////////////for edit ///////////////////////////////////
     
