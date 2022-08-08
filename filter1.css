@@ -1,0 +1,29 @@
+#tblshow{
+    height: 30px;
+    width: 100%;
+}
+table,th,td{
+    border:2px solid black;
+    border-collapse:collapse;
+    text-align: center;
+}
+.filter{
+    text-align: center;
+    height: 100px;
+    margin-top: 2%;
+
+}
+select{
+    margin-bottom: 2%;
+    width: 17%;
+    text-align: center;
+}
+.search{
+
+	margin-top: 15%;
+	margin-left: 37%;
+    width:100%;
+}
+input{
+    width: 20%;
+}
