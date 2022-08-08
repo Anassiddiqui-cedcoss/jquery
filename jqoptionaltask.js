@@ -1,4 +1,8 @@
 $(document).ready(function(){
-   $("input").hide();
+    $("#myselect").change(function(){
+    $text1=$("#myselect :selected").text();
+    alert($text1)
+    })
+})
     
-}) 
+ 
