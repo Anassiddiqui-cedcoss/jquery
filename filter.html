@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="filter&selector.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="filter">
+    <select id="selectOs">
+        <option value="">-Filter By Operating System-</option> 
+        <option value="IOS">iOS</option>
+        <option value="android">Android</option>
+        <option value="windows">Windows</option>
+    </select>
+    <select id="selectBrand">
+        <option value="">-Filter By Brand-</option> 
+        <option value="apple">Apple</option>
+        <option value="motorola">Motorola</option>
+        <option value="samsung">Samsung</option>
+        <option value="asus">ASUS</option>
+        <option value="microsoft">Microsoft</option>
+    </select>
+    <table id="tblshow"></table>
+</div>
+<div class="search">
+
+<input type="text" name="" id="searchBar" placeholder="Search Here.."><button id="btn">Search</button>
+<table id="searchResult"></table>
+</div>
+    <script src="filter&selector.js"></script>
+</body>
+</html>
